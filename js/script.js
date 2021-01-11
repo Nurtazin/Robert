@@ -1,105 +1,53 @@
 'use strict';
-const options = {
-    name: 'test',
-    width: 1243,
-    height: 1243,
-    colors:{
-        border: 'black',
-        bg: 'red'
-    },
-    maketest: function(){
-       console.log('salam');
-    }
-};
-const{border , bg} = options.colors
-console.log(border);
-options.maketest();
-console.log(Object.keys(options).length);
-let counter = 0;
-
-for (let key in options){
-    if(typeof(options[key]) === 'object'){
-        for (let i in options[key]){
-            console.log(`swojstwo ${i} imeet znaczenije ${options[key] [i]}`);
-        }
-    } else{
-        console.log(`swojstwo ${key} imeet znaczenije ${options[key]}`);
-        counter++;
-    }
-}
-console.log(counter);
-console.log(options.width);
-delete options.name;
-console.log(options);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function one (){
-     setTimeout(function(){
-         console.log(1);
-     }, 500);
-}
-function two(){
-    console.log(2);
-};
-one();
-two();
-function LearnJs( lang , callback ) {
-    console.log(`ja uczu jazyk ${lang}`);
-    callback();
-};
-LearnJs('javascript' , function() {
-      console.log("ja proszole etot urok");
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//massiv start
+// const str = prompt("" , "")
+// const produkts = str.split(", ")
+// produkts.sort();
+// console.log(produkts.join('; '));
+// const arr = [1 , 2 , 3 , 4 , 5 , 6];
+// arr.forEach(function( item , i , arr){
+//       console.log(`${i} : ${item} iz massiwa ${arr}`);
+// });
+//arr.pop();
+//arr.push(10);
+//console.log(arr);
+// for(let value of arr){
+//     console.log(arr);
+// }
+// for (let i = 0; i < arr.lenght ; i++){
+//      console.log(arr[i]);
+// }
+//massiv finish
+//object start
+//const options = {
+//    name: 'test',
+    // width: 1243,
+    // height: 1243,
+    // colors:{
+    //     border: 'black',
+    //     bg: 'red'
+    // },
+    // maketest: function(){
+    //    console.log('salam');
+    // }
+//};
+//      setTimeout(function(){
+//          console.log(1);
+//      }, 500);
+// }
+// function two(){
+//     console.log(2);
+// };
+// one();
+// two();
+// function LearnJs( lang , callback ) {
+//     console.log(`ja uczu jazyk ${lang}`);
+//     callback();
+// };
+// LearnJs('javascript' , function() {
+//       console.log("ja proszole etot urok");
+// });
+//object finish
 // practik 3 finish
 //let numberOfFilms;
 
