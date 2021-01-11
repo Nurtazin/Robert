@@ -1,54 +1,82 @@
 'use strict';
-
-let numberOfFilms;
-
-function start() {
-    numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
-    while(numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
-        numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
-    }
-}
-start();
-
-const personalMd = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
-const a =prompt('poslednij prosmotrennyj film' , ''),
-      b = prompt('kak wy jego oceniwajjete?' , ''),
-      c = prompt('poslednij prosmotrennyj film' , ''),
-      d = prompt('kak wy jego oceniwajjete?' , '');
-personalMd.movies[a] = b,
-personalMd.movies[c] = d;
-for ( let i = 0; i < 2; i++ ){
-    const a =prompt('poslednij prosmotrennyj film' , ''),
-          b = prompt('kak wy jego oceniwajjete?' , '');
-     if(a != null && b!=null && a!= '' && b!= '' && a.length < 50) {
-    personalMd.movies[a] = b;
-        console.log('done');
-   }
-    else {
-        console.log('none');
-       i--;
+const options = {
+    name: 'test',
+    width: 1243,
+    height: 1243,
+    colors:{
+        border: 'black',
+        bg: 'red'
+    },
+    maketest: function(){
+       console.log('salam');
     }
 };
-console.log(personalMd);
-function showmydb(hidden){
-    if(!hidden){
-        console.log(personalMd);
+const{border , bg} = options.colors
+console.log(border);
+options.maketest();
+console.log(Object.keys(options).length);
+let counter = 0;
+
+for (let key in options){
+    if(typeof(options[key]) === 'object'){
+        for (let i in options[key]){
+            console.log(`swojstwo ${i} imeet znaczenije ${options[key] [i]}`);
+        }
+    } else{
+        console.log(`swojstwo ${key} imeet znaczenije ${options[key]}`);
+        counter++;
     }
 }
-showmydb(personalMd.privat);
-function writeyuergenres(){
-    for(let i = 1 ; i <= 3; i++ ){
-        const genre = prompt (`wasz lubimyj rzanrpod nomerom $[i]`);
-        personalMd.genres[i - 1] = genre
-    }
+console.log(counter);
+console.log(options.width);
+delete options.name;
+console.log(options);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function one (){
+     setTimeout(function(){
+         console.log(1);
+     }, 500);
 }
-writeyuergenres();
+function two(){
+    console.log(2);
+};
+one();
+two();
+function LearnJs( lang , callback ) {
+    console.log(`ja uczu jazyk ${lang}`);
+    callback();
+};
+LearnJs('javascript' , function() {
+      console.log("ja proszole etot urok");
+});
 
 
 
@@ -72,12 +100,57 @@ writeyuergenres();
 
 
 
+// practik 3 finish
+//let numberOfFilms;
 
+//function start() {
+//    numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+//    while(numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+//        numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+//    }
+//}
+//start();
 
-
-
-
-
+//const personalMd = {
+//    count: numberOfFilms,
+//    movies: {},
+//    actors: {},
+//    genres: [],
+//    privat: false
+//};
+//const a =prompt('poslednij prosmotrennyj film' , ''),
+//      b = prompt('kak wy jego oceniwajjete?' , ''),
+//      c = prompt('poslednij prosmotrennyj film' , ''),
+//      d = prompt('kak wy jego oceniwajjete?' , '');
+//personalMd.movies[a] = b,
+//personalMd.movies[c] = d;
+//for ( let i = 0; i < 2; i++ ){
+//    const a =prompt('poslednij prosmotrennyj film' , ''),
+//          b = prompt('kak wy jego oceniwajjete?' , '');
+//     if(a != null && b!=null && a!= '' && b!= '' && a.length < 50) {
+//    personalMd.movies[a] = b;
+//        console.log('done');
+//   }
+//    else {
+//        console.log('none');
+//       i--;
+//    }
+//};
+//console.log(personalMd);
+//function showmydb(hidden){
+//    if(!hidden){
+//        console.log(personalMd);
+//    }
+//}
+//showmydb(personalMd.privat);
+//function writeyuergenres(){
+//    for(let i = 1 ; i <= 3; i++ ){
+//        const genre = prompt (`wasz lubimyj rzanrpod nomerom $[i]`);
+//        personalMd.genres[i - 1] = genre
+//    }
+//}
+//writeyuergenres();
+// practik 3 finish
 //let num = 30
 //function NumberTer(text){
 //    console.log(text);
@@ -154,12 +227,4 @@ writeyuergenres();
 //        console.log('newerno');
 //        break;
 //        case 90:
-//            console.log('newerno');
-//            break;
- //           case 61:
- //               console.log('yes');
-//                break;
-//                default:
-//                    console.log('ne w etot raz');
-//                    break;
-//}
+//            console.log('newer
